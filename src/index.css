@@ -1,13 +1,41 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'Montserrat', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+input {
+  @apply px-6 py-2 rounded-full w-full border my-1;
+}
+
+h2.primary{
+  @apply bg-teal-200 w-2/3 text-center py-1 rounded-2xl text-darkBg font-bold dark:bg-divBg dark:text-blue-100
+}
+
+h3.primary{
+  @apply bg-teal-100 w-1/2 mt-2 text-center rounded-md hover:scale-105 duration-300 cursor-pointer hover:font-semibold dark:bg-darkBg dark:text-teal-100
+}
+
+button.primary {
+  background-color: #F5385D;
+  @apply bg-primary p-2 text-white font-bold rounded-3xl shadow-md shadow-primary dark:bg-darkBtnBg dark:shadow-md dark:shadow-blue-400; 
+}
+
+button.primary:hover {
+  @apply bg-white dark:hover:bg-blue-300 text-rose-500 shadow-rose-500/80 border-2 border-rose-500 dark:text-darkText ease-in-out duration-300  dark:border-darkBtnHoverShadow dark:shadow-darkBtnHoverShadow dark:hover:text-darkBtnBg; 
+}
+
+.primary-div{
+  @apply shadow-2xl shadow-rose-500 rounded-3xl bg-divBg dark:shadow-blue-500
+  /* padding: 4rem;
+  box-shadow: 3px 2px 23px 4px #ff385c;
+  border-radius: 2rem; */
+}
+
+.primary-div:hover{
+  @apply border-2 shadow-lg border-rose-500 shadow-lg shadow-rose-300 duration-200 ease-in-out  dark:border-blue-500 dark:shadow-blue-300
+  /* border: 1px solid #ff385c;
+  box-shadow: 3px 2px 23px 4px #f893a6; */
 }
